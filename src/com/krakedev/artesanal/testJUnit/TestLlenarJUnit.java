@@ -15,7 +15,7 @@ public class TestLlenarJUnit {
 		
 		rubia.llenarMaquina();
 		
-		assertEquals(7900, rubia.getCantidadActual()); //el 1er parametro es el resultado esperado, el 2do es de donde lo vamos a tomar, el 3ro es el margen de error
+		assertEquals(7900, rubia.getCantidadActual(), 0.0001); //el 1er parametro es el resultado esperado, el 2do es de donde lo vamos a tomar, el 3ro es el margen de error
 		
 	}
 	
