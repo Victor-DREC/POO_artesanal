@@ -75,6 +75,19 @@ public class TestNegocioMejorado {
         System.out.println("Total después de sumar 15.0: " + lucia.getTotalConsumido());
         negocio.registrarConsumo(lucia, 7.5);
         System.out.println("Total después de sumar 7.5 más (debe ser 22.5, no 7.5): " + lucia.getTotalConsumido());
+        
+        //integracion
+        System.out.println("\n--- Integracion ---");
+        Maquina maquinaIpa2 = negocio.getMaquinas().get(0);
+        negocio.registrarCliente("Sofía Mena", "0506070809");
+        Cliente sofia = negocio.buscarClientePorCedula("0506070809");
+
+        double valor1 = negocio.consumirCerveza(sofia.getCodigo(), maquinaIpa2.getCodigo(), 200);
+        System.out.println("Total de Sofía tras el primer consumo (debe ser igual a " + valor1 + "): " + sofia.getTotalConsumido());
+
+        double valor2 = negocio.consumirCerveza(sofia.getCodigo(), maquinaIpa.getCodigo(), 150);
+        System.out.println("Total de Sofía tras el segundo consumo (debe ser " + valor1 + " + " + valor2 + " = " + (valor1 + valor2) + "): " + sofia.getTotalConsumido());
+        
 
     }
 

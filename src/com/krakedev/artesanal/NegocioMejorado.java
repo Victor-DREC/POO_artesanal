@@ -119,6 +119,7 @@ public class NegocioMejorado {
 	    Maquina maquina = recuperarMaquina(codigoMaquina);
 	    Cliente cliente = buscarClientePorCodigo(codigoCliente);
 	    double valor = maquina.servirCerveza(cantidad);
+	    registrarConsumo(cliente, valor);
 	    return valor;
 	}
 	
