@@ -35,6 +35,17 @@ public class TestNegocioMejorado {
             m.imprimir();
         }
         
+        //Metodo Recuperar Maquina
+        System.out.println("\n--- Recuperar Maquina ---");
+        String codigoExistente = negocio.getMaquinas().get(negocio.getMaquinas().size() - 1).getCodigo();
+
+        Maquina encontrada = negocio.recuperarMaquina(codigoExistente);
+        System.out.println("Buscando código existente (" + codigoExistente + "): "
+                + (encontrada != null ? "encontrada -> " + encontrada.getNombreCerveza() : "no encontrada"));
+
+        Maquina noEncontrada = negocio.recuperarMaquina("M-999");
+        System.out.println("Buscando código inexistente (M-999): "
+                + (noEncontrada != null ? "encontrada" : "no encontrada, como se esperaba"));
     }
 
 }
