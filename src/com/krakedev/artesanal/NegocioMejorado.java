@@ -7,6 +7,9 @@ public class NegocioMejorado {
 	private ArrayList<Maquina> maquinas;
 	private double cantidadesCambio;
 	private double cantidadActual;
+	private ArrayList<Cliente> clientes;
+
+	
 	
 	public NegocioMejorado() {
 		maquinas = new ArrayList<Maquina>();
@@ -18,6 +21,14 @@ public class NegocioMejorado {
 
 	public void setMaquinas(ArrayList<Maquina> maquinas) {
 		this.maquinas = maquinas;
+	}
+	
+	public ArrayList<Cliente> getClientes() {
+	    return clientes;
+	}
+
+	public void setClientes(ArrayList<Cliente> clientes) {
+	    this.clientes = clientes;
 	}
 	
 	public String generarCodigo() {
