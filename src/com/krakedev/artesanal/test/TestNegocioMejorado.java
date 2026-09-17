@@ -1,6 +1,7 @@
 package com.krakedev.artesanal.test;
 
 
+import com.krakedev.artesanal.Cliente;
 import com.krakedev.artesanal.Maquina;
 import com.krakedev.artesanal.NegocioMejorado;
 
@@ -47,7 +48,33 @@ public class TestNegocioMejorado {
         System.out.println("Buscando código inexistente (M-999): "
                 + (noEncontrada != null ? "encontrada" : "no encontrada, como se esperaba"));
         
+        //Metodo consumir cerveza
+        System.out.println("\n--- Consumo de cerveza ---");
+        negocio.registrarCliente("Carlos Ruiz", "0304050607");
+
+        Maquina maquinaIpa = negocio.getMaquinas().get(0);
+        Cliente carlos = negocio.buscarClientePorCedula("0304050607");
+
+        double cantidadAntes = maquinaIpa.getCantidadActual();
+        double valor = negocio.consumirCerveza(carlos.getCodigo(), maquinaIpa.getCodigo(), 300);
         
+
+        System.out.println("Cerveza consumida: " + maquinaIpa.getNombreCerveza());
+        System.out.println("Valor devuelto por consumirCerveza: " + valor);
+        System.out.println("Cantidad en la máquina bajó de " + cantidadAntes + " a " + maquinaIpa.getCantidadActual());
+        System.out.println("Total consumido de Carlos (debe seguir en 0.0, aun no se acumula): " + carlos.getTotalConsumido());
+        
+        
+        //metodo registrar consumo
+        System.out.println("\n--- Registro del consumo ---");
+        negocio.registrarCliente("Lucía Vera", "0405060708");
+        Cliente lucia = negocio.buscarClientePorCedula("0405060708");
+
+        System.out.println("Total antes: " + lucia.getTotalConsumido());
+        negocio.registrarConsumo(lucia, 15.0);
+        System.out.println("Total después de sumar 15.0: " + lucia.getTotalConsumido());
+        negocio.registrarConsumo(lucia, 7.5);
+        System.out.println("Total después de sumar 7.5 más (debe ser 22.5, no 7.5): " + lucia.getTotalConsumido());
 
     }
 
