@@ -8,7 +8,7 @@ public class TestCliente {
 		
 	        NegocioMejorado negocio = new NegocioMejorado();
 	        negocio.registrarCliente("Juan Pérez", "0102030405");
-	        System.out.println("Cliente registrado correctamente");
+	        System.out.println("Clientes registrados: " + negocio.getClientes().size());
 	    }
 
 	
