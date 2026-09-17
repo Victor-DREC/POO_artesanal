@@ -1,6 +1,7 @@
 package com.krakedev.artesanal.test;
 
 
+import com.krakedev.artesanal.Cliente;
 import com.krakedev.artesanal.Maquina;
 import com.krakedev.artesanal.NegocioMejorado;
 
@@ -46,6 +47,9 @@ public class TestNegocioMejorado {
         Maquina noEncontrada = negocio.recuperarMaquina("M-999");
         System.out.println("Buscando código inexistente (M-999): "
                 + (noEncontrada != null ? "encontrada" : "no encontrada, como se esperaba"));
+        
+        
+
     }
 
 }

@@ -8,6 +8,7 @@ public class NegocioMejorado {
 	private double cantidadesCambio;
 	private double cantidadActual;
 	private ArrayList<Cliente> clientes;
+	private int ultimoCodigo = 100;
 
 	
 	
@@ -52,8 +53,16 @@ public class NegocioMejorado {
 		this.cantidadActual = cantidadActual;
 	}
 	
+	public int getUltimoCodigo() {
+		return ultimoCodigo;
+	}
+
+	public void setUltimoCodigo(int ultimoCodigo) {
+		this.ultimoCodigo = ultimoCodigo;
+	}
 	
-	
+	//////
+
 	public boolean agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
 	    String codigo = generarCodigo();
 	    if (recuperarMaquina(codigo) != null) {
@@ -80,5 +89,13 @@ public class NegocioMejorado {
 	    }
 	    return null;
 	}
+	
+	public void registrarCliente(String nombre, String cedula) {
+	    Cliente cliente = new Cliente(nombre, cedula);
+	    cliente.setCodigo(ultimoCodigo);
+	    ultimoCodigo++;
+	    clientes.add(cliente);
+	}
+
     
 }
