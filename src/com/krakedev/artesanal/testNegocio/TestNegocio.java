@@ -17,6 +17,8 @@ public class TestNegocio {
 		
 		Maquina m1 = negocio1.getMaquinaA();
 		double capacidad = m1.getCapacidadMaxima();
+		
+		System.out.println("Capacidad Maxima: "+capacidad+" Litros");
 
 	}
 
