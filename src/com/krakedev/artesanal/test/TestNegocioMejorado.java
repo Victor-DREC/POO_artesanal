@@ -88,7 +88,10 @@ public class TestNegocioMejorado {
         double valor2 = negocio.consumirCerveza(sofia.getCodigo(), maquinaIpa.getCodigo(), 150);
         System.out.println("Total de Sofía tras el segundo consumo (debe ser " + valor1 + " + " + valor2 + " = " + (valor1 + valor2) + "): " + sofia.getTotalConsumido());
         
-
+        //Metodo consultar valor vendido
+        System.out.println("\n--- Valor vendido ---");
+        System.out.println("Total vendido: " + negocio.consultarValorVendido());
+        
     }
 
 }
