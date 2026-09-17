@@ -16,6 +16,12 @@ public class TestCliente {
 	        
 	        Cliente encontrado1 = negocio.buscarClientePorCedula("010203040");
 	        System.out.println(encontrado1 != null ? "Cliente encontrado por cédula" : "No encontrado");
+	        
+	        Cliente porCodigo = negocio.buscarClientePorCodigo(100);
+	        System.out.println(porCodigo != null ? "Cliente encontrado por código" : "No encontrado");
+	        
+	        Cliente porCodigo1 = negocio.buscarClientePorCodigo(1);
+	        System.out.println(porCodigo1 != null ? "Cliente encontrado por código" : "No encontrado");
 	    }
 
 	
