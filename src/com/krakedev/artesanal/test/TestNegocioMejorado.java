@@ -1,7 +1,6 @@
 package com.krakedev.artesanal.test;
 
 
-import com.krakedev.artesanal.Cliente;
 import com.krakedev.artesanal.Maquina;
 import com.krakedev.artesanal.NegocioMejorado;
 
