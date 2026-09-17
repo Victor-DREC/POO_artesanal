@@ -7,7 +7,7 @@ public class NegocioMejorado {
 	private ArrayList<Maquina> maquinas;
 	private double cantidadesCambio;
 	private double cantidadActual;
-	private ArrayList<Cliente> clientes;
+	private ArrayList<Cliente> clientes = new ArrayList<>();
 	private int ultimoCodigo = 100;
 
 	
