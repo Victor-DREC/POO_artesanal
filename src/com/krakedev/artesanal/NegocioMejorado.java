@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class NegocioMejorado {
 	
-	ArrayList<Maquina> maquinas;
+	private ArrayList<Maquina> maquinas;
 	
 	public NegocioMejorado() {
 		maquinas = new ArrayList<Maquina>();
@@ -22,5 +22,11 @@ public class NegocioMejorado {
         int numeroAleatorio = (int) (Math.random() * 100) + 1;
         return "M-" + numeroAleatorio;
     }
-
+	
+	public void agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
+	    String codigo = generarCodigo();
+	    Maquina maquina = new Maquina( nombreCerveza, descripcion, precioPorMl, codigo );
+	    maquinas.add(maquina);
+	}
+    
 }
