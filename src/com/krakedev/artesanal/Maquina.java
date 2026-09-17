@@ -68,11 +68,11 @@ public class Maquina {
 	public void imprimir() {
 		String mensaje;
 		mensaje = "Nombre de cerveza: "+nombreCerveza
-				  +" , Descripción: "+descripcion
-				  +" , Precio por Ml: "+precioPorMl
-				  +" , Capacidad maxima: "+ capacidadMaxima
-				  +" , Cantidad actual: "+cantidadActual
-				  +" , Código de la cerveza: "+codigo;
+				  +" | Descripción: "+descripcion
+				  +" | Precio por Ml: "+precioPorMl
+				  +" | Capacidad maxima: "+ capacidadMaxima
+				  +" | Cantidad actual: "+cantidadActual
+				  +" | Código de la cerveza: "+codigo;
 		
 		System.out.println(mensaje);
 	}

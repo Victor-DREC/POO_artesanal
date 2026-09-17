@@ -1,5 +1,6 @@
 package com.krakedev.artesanal.test;
 
+
 import com.krakedev.artesanal.Maquina;
 import com.krakedev.artesanal.NegocioMejorado;
 
@@ -26,6 +27,14 @@ public class TestNegocioMejorado {
                                " | Descripción: " + maquina.getDescripcion() +
                                " | Precio/ml: $" + maquina.getPrecioPorMl());
         }
+        
+        //Metodo Cargar Maquinas
+        System.out.println("\n--- Carga de Maquinas ---");
+        negocio.cargarMaquinas();
+        for (Maquina m : negocio.getMaquinas()) {
+            m.imprimir();
+        }
+        
     }
 
 }

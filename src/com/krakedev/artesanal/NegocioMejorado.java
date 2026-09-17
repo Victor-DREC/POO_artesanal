@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class NegocioMejorado {
 	
 	private ArrayList<Maquina> maquinas;
+	private double cantidadesCambio;
+	private double cantidadActual;
 	
 	public NegocioMejorado() {
 		maquinas = new ArrayList<Maquina>();
@@ -23,10 +25,38 @@ public class NegocioMejorado {
         return "M-" + numeroAleatorio;
     }
 	
+	public double getCantidadesCambio() {
+		return cantidadesCambio;
+	}
+
+	public void setCantidadesCambio(double cantidadesCambio) {
+		this.cantidadesCambio = cantidadesCambio;
+	}
+
+	public double getCantidadActual() {
+		return cantidadActual;
+	}
+
+	public void setCantidadActual(double cantidadActual) {
+		this.cantidadActual = cantidadActual;
+	}
+	
+	
+	
 	public void agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
 	    String codigo = generarCodigo();
 	    Maquina maquina = new Maquina( nombreCerveza, descripcion, precioPorMl, codigo );
 	    maquinas.add(maquina);
 	}
+	
+	
+	public void cargarMaquinas() {
+
+	    for (Maquina maquina : maquinas) {
+	        maquina.llenarMaquina();
+	    }
+	}
+
+	
     
 }
